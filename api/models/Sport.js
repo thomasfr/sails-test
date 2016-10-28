@@ -50,16 +50,6 @@ module.exports = {
       required: true
     },
 
-    name_nl: {
-      type: 'string',
-      unique: true,
-    },
-
-    slug_nl: {
-      type: 'string',
-      unique: true
-    },
-
     courtTermSingular: {
       type: 'string',
       required: true
