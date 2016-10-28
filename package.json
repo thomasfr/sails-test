@@ -29,7 +29,8 @@
     "debug": "node debug app.js",
     "start": "node app.js",
     "www": "sails www",
-    "sails": "sails"
+    "sails": "sails",
+    "build": "zip ./.tmp/build.zip -r * .[^.]* -x 'node_modules/*' -x '.tmp/*' -x '.idea/*' -x '.git/*' -x '.gitignore' -x 'assets/*'"
   },
   "main": "app.js",
   "repository": {
