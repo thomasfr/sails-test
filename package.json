@@ -30,7 +30,8 @@
     "start": "node app.js",
     "www": "sails www",
     "sails": "sails",
-    "build": "zip ./.tmp/build.zip -r * .[^.]* -x 'node_modules/*' -x '.tmp/*' -x '.idea/*' -x '.git/*' -x '.gitignore' -x 'assets/*'"
+    "build": "zip ./.tmp/build.zip -r * .[^.]* -x 'node_modules/*' -x '.tmp/*' -x '.idea/*' -x '.git/*' -x '.gitignore' -x 'assets/*'",
+    "deploy": "npm run build && eb deploy"
   },
   "main": "app.js",
   "repository": {
