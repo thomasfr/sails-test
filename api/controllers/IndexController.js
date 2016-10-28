@@ -5,7 +5,6 @@ var pkg = require('../../package.json');
 
 exports.get = function (request, response) {
   request.session.views = (request.session.views) ? request.session.views + 1 : 1;
-  sails.log.verbose('locals', response.locals);
   var locals = response.locals;
   locals.pid = process.pid;
   locals.hostname = os.hostname();
