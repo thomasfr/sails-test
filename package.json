@@ -28,10 +28,12 @@
   "scripts": {
     "debug": "node debug app.js",
     "start": "node app.js",
+    "grunt": "grunt",
     "www": "sails www",
     "sails": "sails",
-    "build": "zip ./.tmp/build.zip -r * .[^.]* -x 'node_modules/*' -x '.tmp/*' -x '.idea/*' -x '.git/*' -x '.gitignore' -x 'assets/*'",
-    "deploy": "npm run build && eb deploy"
+    "build": "npm run www",
+    "package": "zip ./.tmp/build.zip -r * .[^.]* -x 'node_modules/*' -x '.tmp/*' -x '.idea/*' -x '.git/*' -x '.gitignore' -x 'assets/*'",
+    "deploy": "npm run build && npm run package && eb deploy"
   },
   "main": "app.js",
   "repository": {
