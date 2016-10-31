@@ -31,11 +31,11 @@ var sails = require('sails');
 // Try to get `rc` dependency (for loading `.sailsrc` files).
 var rc = require('rc');
 
-// Start server
-var config = rc('sails');
+//// Start server
+//var config = rc('sails');
+//
+//// TODO: Check for environment or add to .sailsrc instead
+//config.hooks = config.hooks || {};
+//config.hooks.grunt = false;
 
-// TODO: Check for environment or add to .sailsrc instead
-config.hooks = config.hooks || {};
-config.hooks.grunt = false;
-
-sails.lift(config);
+sails.lift(rc('sails'));
