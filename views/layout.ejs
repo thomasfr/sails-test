@@ -29,7 +29,7 @@
   -->
 
   <!--STYLES-->
-  <link rel="stylesheet" href="styles/importer.css">
+  <link rel="stylesheet" href="min/production.min.css">
   <!--STYLES END-->
 </head>
 
@@ -59,7 +59,7 @@
   -->
 
   <!--TEMPLATES-->
-
+  
   <!--TEMPLATES END-->
 
 
@@ -87,12 +87,11 @@
   -->
 
   <!--SCRIPTS-->
-  <script src="js/dependencies/sails.io.js"></script>
+  <script src="min/production.min.js"></script>
   <!--SCRIPTS END-->
   <script>
-    io.socket.on('person', function (data) {
-      console.log('person message', data);
-    });
+    io.socket.on('person', (data) => console.log('person message', data));
+    io.socket.get('/person', (persons) => console.log('persons', persons));
   </script>
 </body>
 </html>
