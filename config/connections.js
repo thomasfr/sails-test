@@ -49,6 +49,13 @@ module.exports.connections = {
     port: process.env.MYSQL_PORT || 3306,
   },
 
+
+  redis: {
+    adapter: 'sails-redis',
+    port: process.env.REDIS_PORT || 6379,
+    host: process.env.REDIS_HOST || '127.0.0.1',
+  }
+
   /***************************************************************************
    *                                                                          *
    * MongoDB is the leading NoSQL database.                                   *

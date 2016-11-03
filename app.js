@@ -23,19 +23,6 @@
 // no matter where we actually lift from.
 // > Note: This is not required in order to lift, but it is a convenient default.
 process.chdir(__dirname);
-
-// Attempt to import `sails`.
 var sails = require('sails');
-
-// --•
-// Try to get `rc` dependency (for loading `.sailsrc` files).
 var rc = require('rc');
-
-//// Start server
-//var config = rc('sails');
-//
-//// TODO: Check for environment or add to .sailsrc instead
-//config.hooks = config.hooks || {};
-//config.hooks.grunt = false;
-
 sails.lift(rc('sails'));

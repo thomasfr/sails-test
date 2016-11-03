@@ -29,7 +29,7 @@
   -->
 
   <!--STYLES-->
-  <link rel="stylesheet" href="/styles/importer.css">
+  <link rel="stylesheet" href="styles/importer.css">
   <!--STYLES END-->
 </head>
 
@@ -87,15 +87,11 @@
   -->
 
   <!--SCRIPTS-->
-  <script src="/js/dependencies/sails.io.js"></script>
+  <script src="js/dependencies/sails.io.js"></script>
   <!--SCRIPTS END-->
   <script>
-    io.socket.get('/join', console.log);
-    io.socket.on('message', function (data) {
-      console.log('message', data);
-    });
-    io.socket.on('myroom', function (data) {
-      console.log('myroom', data);
+    io.socket.on('person', function (data) {
+      console.log('person message', data);
     });
   </script>
 </body>

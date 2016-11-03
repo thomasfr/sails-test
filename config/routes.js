@@ -33,8 +33,6 @@ module.exports.routes = {
    ***************************************************************************/
 
   '/': 'IndexController.get',
-  '/socket': 'IndexController.socket',
-  '/join': 'IndexController.join',
 
   /***************************************************************************
    *                                                                          *

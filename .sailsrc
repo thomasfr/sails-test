@@ -1,7 +1,8 @@
 {
   "hooks": {
     "csrf": false,
-    "grunt": false
+    "grunt": false,
+    "i18n": false
   },
   "generators": {
     "modules": {}
