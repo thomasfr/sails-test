@@ -59,7 +59,7 @@
   -->
 
   <!--TEMPLATES-->
-  
+
   <!--TEMPLATES END-->
 
 
@@ -89,6 +89,9 @@
   <!--SCRIPTS-->
   <script src="min/production.min.js"></script>
   <!--SCRIPTS END-->
+  <script>
+    io.sails.transports = ['websocket'];
+  </script>
   <script>
     io.socket.on('person', (data) => console.log('person message', data));
     io.socket.get('/person', (persons) => console.log('persons', persons));

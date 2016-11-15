@@ -131,7 +131,7 @@ module.exports.sockets = {
    *                                                                          *
    ***************************************************************************/
   transports: [
-    "polling",
+//    "polling",
     "websocket"
   ]
 
