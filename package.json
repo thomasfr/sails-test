@@ -35,9 +35,10 @@
     "grunt": "grunt",
     "www": "sails www",
     "sails": "sails",
-    "build": "npm run www",
-    "package": "zip ./.tmp/build.zip -r * .[^.]* -x 'node_modules/*' -x 'npm-debug.log' -x '*.pid' -x '*.out' -x '*.log' -x '*.seed' -x 'lib-cov' -x 'dump.rdb' -x '.node-history' -x '*~' -x '*#' -x '.elasticbeanstalk/*' -x '.tmp/*' -x '.idea/*' -x '.git/*' -x '.gitignore' -x 'assets/*' -x 'tasks/*'",
-    "deploy": "npm run build && npm run package && eb deploy"
+    "build:www": "npm run www",
+    "build:zip": "zip ./.tmp/build.zip -r * .[^.]* -x 'node_modules/*' -x 'npm-debug.log' -x '*.pid' -x '*.out' -x '*.log' -x '*.seed' -x 'lib-cov' -x 'dump.rdb' -x '.node-history' -x '*~' -x '*#' -x '.elasticbeanstalk/*' -x '.tmp/*' -x '.idea/*' -x '.git/*' -x '.gitignore' -x 'assets/*' -x 'tasks/*'",
+    "build": "npm run build:www && npm run build:zip",
+    "deploy": "npm run build && eb deploy"
   },
   "main": "app.js",
   "repository": {
