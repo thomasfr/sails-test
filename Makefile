@@ -13,6 +13,8 @@ test:
 
 
 build:
-	@echo "Makefile: Deploying to AWS"
-	@npm run build
+	@echo "Makefile: Creating build artifact"
+	@-rm -r node_modules
+	@NODE_ENV=production npm install
+	@NODE_ENV=production npm run build
 
