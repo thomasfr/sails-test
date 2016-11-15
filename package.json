@@ -42,7 +42,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Thomas/sails-aws.git"
+    "url": "git://github.com/thomasfr/sails-aws.git"
   },
   "author": "Thomas",
   "license": ""
